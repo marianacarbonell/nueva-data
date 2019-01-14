@@ -6,3 +6,6 @@ const example = () => {
 };
 
 window.example = example;
+
+// funcion filtrar
+
