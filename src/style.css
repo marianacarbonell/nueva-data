@@ -1,0 +1,22 @@
+.logo{
+    width: 90px;
+}
+
+body{
+    background-image: url("fondo/fondo.jpg");
+}
+
+.card{
+    margin: 3%;
+
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.section{
+    margin-top:1%
+}
