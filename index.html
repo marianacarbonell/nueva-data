@@ -3,49 +3,51 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  </head>
-  <header>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+  <header class="header">
+  
   <div class="row">
     <div class="col-sm-12">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-      <img src="res/lol.png" class=" logo d-inline-block align-top" alt="">
-    </a>
+      <a class="navbar-brand" href="#"><img src="fondo/logopokemon.png" class="logo"></a>
+     
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="select" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Pokemones
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Planta</a>
-              <a class="dropdown-item" href="#">Veneno</a>
-              <a class="dropdown-item" href="#">Fuego</a>
-              <a class="dropdown-item" href="#">Bicho</a>
-              <a class="dropdown-item" href="#">Volador</a>
-              <a class="dropdown-item" href="#">Normal</a>
-              <a class="dropdown-item" href="#">Eléctrico</a>
-              <a class="dropdown-item" href="#">Tierra</a>
-              <a class="dropdown-item" href="#">Agua</a>
-              <a class="dropdown-item" href="#">Lucha</a>
-              <a class="dropdown-item" href="#">Psíquico</a>
-              <a class="dropdown-item" href="#">Roca</a>
-              <a class="dropdown-item" href="#">Fantasma</a>
-              <a class="dropdown-item" href="#">Hielo</a>
-              <a class="dropdown-item" href="#">Dragón</a>
+              <a class="dropdown-item" value="0" href="#">Todos</a>
+              <a class="dropdown-item" value="Grass" href="#">Planta</a>
+              <a class="dropdown-item" value="Poison" href="#">Veneno</a>
+              <a class="dropdown-item" value="Fire" href="#">Fuego</a>
+              <a class="dropdown-item" value="Bug" href="#">Bicho</a>
+              <a class="dropdown-item" value="Flying" href="#">Volador</a>
+              <a class="dropdown-item" value="Normal" href="#">Normal</a>
+              <a class="dropdown-item" value="Electric" href="#">Eléctrico</a>
+              <a class="dropdown-item" value="Ground" href="#">Tierra</a>
+              <a class="dropdown-item" value="Water" href="#">Agua</a>
+              <a class="dropdown-item" value="Fighting" href="#">Lucha</a>
+              <a class="dropdown-item" value="Psychic" href="#">Psíquico</a>
+              <a class="dropdown-item" value="Rock" href="#">Roca</a>
+              <a class="dropdown-item" value="Ghost" href="#">Fantasma</a>
+              <a class="dropdown-item" value="Ice" href="#">Hielo</a>
+              <a class="dropdown-item" value="Dragon" href="#">Dragón</a>
             </div>
           </li>
+       
           <li class="nav-item">
-            <a class="nav-link" href="#">Estadísticas</a>
+            <a class="nav-link" href="https://www.pokemon.com/es/" target="_blank">Pokémon Go</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Más Información</a>
+            <a class="nav-link" href="https://www.pokemon.com/country_no_trans/cl/" target="_blank">Página Oficial Pokémon</a>
           </li>
         </ul>
       </div>
@@ -53,8 +55,22 @@
   </div>
 </div>
  </header>
-  <body>
-    <div id="root"></div>
+  
+<section class="section">
+      <div class="container">
+     <!--
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Bleh Bleh Bleh</p>
+          </div>
+        </div>--> 
+
+
+
+    <div id="root" class="row"></div>
+      </div>
     <!-- <script src="./data/injuries/injuries.js"></script> -->
     <script src="./data/pokemon/pokemon.js"></script> 
     <!-- <script src="./data/steam/steam.js"></script> -->
@@ -62,24 +78,19 @@
     <!-- <script src="./data/lol/lol.js"></script> -->
     <script src="data.js"></script>
     <script src="main.js"></script>
+  </section>
+
+  <footer class="footer" >
+    <div class="row">
+    <div class="col">&copy;Copyright 2019, Pokemon Corporation</div>
+    </div>
+    </footer> 
+  </div>
 
 
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </body>
-  <footer class="footer" >
-<div class="row">
-<div class="col">&copy;Copyright 2019, Pokemon Corporation</div>
-</div>
-</footer> 
+
 </html>
