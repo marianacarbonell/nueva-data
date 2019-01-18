@@ -36,9 +36,12 @@
     </nav>
   </div>
 </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top<i id="subir" class="fas fa-arrow-circle-up"></i></button>
  </header>
+ <div class="container">
  <section>
-    <select id="select">
+   
+    <select id="select" class="select">
         <option value="0"> Tipos de Pokemones </option>
         <option value="Grass"> Plantas </option>
         <option value="Poison"> Venenos </option>
@@ -57,8 +60,16 @@
         <option value="Dragon"> Dragón </option>
       </select>
 </section>
+<section>
+
+  <select id="selectordenar" class="selectordenar">
+  <option value="0">Ordenar </option>    
+  <option value="A"> A-Z </option>
+  <option value="Z"> Z-A</option>
+  </select>
+</section>
 <section class="section">
-      <div class="container"></div>
+      
      <!--
         <div class="card" style="width: 18rem;">
           <img src="..." class="card-img-top" alt="...">
@@ -71,7 +82,7 @@
 
 
     <div id="root" class="row"></div>
-      </div>
+     <!--   </div>  -->
     <!-- <script src="./data/injuries/injuries.js"></script> -->
     <script src="./data/pokemon/pokemon.js"></script> 
     <!-- <script src="./data/steam/steam.js"></script> -->
@@ -80,7 +91,7 @@
     <script src="data.js"></script>
     <script src="main.js"></script>
   </section>
-
+</div>
   <footer class="footer" >
     <div class="row">
     <div class="col">&copy;Copyright 2019, Pokemon Corporation</div>
