@@ -21,4 +21,8 @@ const filterType = (data,condition) => {
   };
 
 // funcion de ordenar
+const orderPokemon = (data, condition)=> {
+const ordered = data.sort((a,b)=> (a[condition] > b[condition]) ? 1 : -1 );
+return ordered;
+}
 
