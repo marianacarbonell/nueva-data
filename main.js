@@ -1,6 +1,7 @@
 const data =(POKEMON.pokemon);
 const rootPokemon = document.getElementById("root");
 const selectType = document.getElementById("select"); 
+const selectOrder = document.getElementById("selectorder");
 
 //Funciones para el boton de volver arriba
 window.onscroll = function () { scrollFunction() };
@@ -42,7 +43,6 @@ data.forEach(element => {
 return pokemonCards;
 }
 
-
 // funcion filtro por tipo
 selectType.addEventListener("change",() => {
 let condition = selectType.value;
@@ -52,7 +52,6 @@ let filterPokemon = filterType(data, condition);
 rootPokemon.innerHTML = "";
 
 filterPokemon.forEach(element =>{
-  //if (element.weaknesses[1] === '' && element.type[1] === ''){
     rootPokemon.innerHTML +=  `
     <div class="col-sm-12 col-md-3 col-xl-3 col-lg-4">
     <div class="card" >
@@ -69,10 +68,28 @@ filterPokemon.forEach(element =>{
 }
  )
 });
+;
+
+// ordenar
+
+selectOrder.addEventListener('change', ()=>{
+let condition = selectOrder.value;
+let orderAZ = orderPokemon(data,condition); rootPokemon.innerHTML=''; orderAZ.forEach(element =>{
+   rootPokemon.innerHTML +=`
+   <div class="col-sm-12 col-md-3 col-xl-3 col-lg-4">
+   <div class="card" >
+   <img src="${element.img}" class="card-img-top" alt="...">
+   <div class="card-body">
+     <p class="card-text">${element.name}</p>
+     <p class="card-text">${element.num}</p>
+     <p class="card-text"><b>Tipos:</b> ${element.type.join(", ")}</p>
+     <p class="card-text"><b>Debilidades</b>: ${element.weaknesses.join(', ')}</p>
+   </div>
+   </div>
+   </div>
+   `
+}
+)
+});
+
 window.onload = showData(data);
-//rootPokemon.innerHTML = pokemonCards
-
-
-
-
-
