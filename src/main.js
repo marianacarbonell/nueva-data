@@ -2,6 +2,24 @@ const data =(POKEMON.pokemon);
 const rootPokemon = document.getElementById("root");
 const selectType = document.getElementById("select"); 
 
+//Funciones para el boton de volver arriba
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        topFunction();
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 //mostrando tarjetas
 const showData = (data) =>{
 let pokemonCards = " ";
@@ -49,7 +67,6 @@ filterPokemon.forEach(element =>{
     </div>
     `
 }
-  
  )
 });
 window.onload = showData(data);

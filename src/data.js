@@ -20,4 +20,5 @@ const filterType = (data,condition) => {
   return pokeFilter;
   };
 
+// funcion de ordenar
 
